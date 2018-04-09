@@ -1,7 +1,7 @@
 def game
-	p "ค้อน  = 0"
-	p "กรรไกร = 1"
-	p "กระดาษ = 2"
+	p "GAME Rock Paper Scissors"
+	p "Rock = 0 : Scissors = 1 : Paper = 2"
+
 
 user = gets.chomp.to_i
 p user 
