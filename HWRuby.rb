@@ -2,16 +2,29 @@ def game
 
 	scoreuser = 0
 	scorecom = 0
+	gameround = 1 
 
-	while scoreuser <2 or scorecom < 2 
-		
-	p "GAME Rock Paper Scissors"
-	p "Rock = 0 : Scissors = 1 : Paper = 2"	
-	user = gets.chomp.to_i
-	puts  "คำตอบของคุณ  #{user}"
-	
-	com = rand(3)
-	puts  "คำตอบของ COM #{com}"
+	while scoreuser <2 && scorecom < 2 
+		p "GAMEROUND #{gameround}"
+		p "GAME Rock Paper Scissors"
+		p "Rock = 0 : Scissors = 1 : Paper = 2"	
+		user = gets.chomp.to_i
+		if user == 0
+			puts  "คำตอบของคุณ : Rock"
+		elsif user == 1
+			puts  "คำตอบของคุณ : Scissors"	
+		elsif user == 2
+			puts  "คำตอบของคุณ : Paper"
+		end	
+
+		com = rand(3)
+		if com == 0
+			puts  "คำตอบของ COM : Rock"
+		elsif com == 1
+			puts  "คำตอบของ COM : Scissors"	
+		elsif com == 2
+			puts  "คำตอบของ COM : Paper"
+		end	
 
 		if user == 0 && com == 0
 			puts "Always"
@@ -69,8 +82,8 @@ def game
 
 		puts  "คะแนนของคุณคือ #{scoreuser}"
 		puts  "คะแนนของ COM #{scorecom}"
-
-	 end	
+		gameround +=1
+	end	
 
 end
 
