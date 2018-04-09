@@ -10,13 +10,15 @@ def game
 		p "Rock = 0 : Scissors = 1 : Paper = 2"	
 
 		user = gets.chomp.to_i
-		
+
 		if user == 0
 			puts  "คำตอบของคุณ : Rock"
 		elsif user == 1
 			puts  "คำตอบของคุณ : Scissors"	
 		elsif user == 2
 			puts  "คำตอบของคุณ : Paper"
+		else
+		  	puts  "กรุณาพิมพ์ ตัวเลข  0-2"
 		end	
 
 		com = rand(3)
