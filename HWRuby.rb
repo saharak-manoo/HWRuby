@@ -5,10 +5,12 @@ def game
 	gameround = 1 
 
 	while scoreuser <2 && scorecom < 2 
-		p "GAMEROUND #{gameround}"
+		p "ROUND #{gameround}"
 		p "GAME Rock Paper Scissors"
 		p "Rock = 0 : Scissors = 1 : Paper = 2"	
+
 		user = gets.chomp.to_i
+		
 		if user == 0
 			puts  "คำตอบของคุณ : Rock"
 		elsif user == 1
@@ -83,8 +85,14 @@ def game
 		puts  "คะแนนของคุณคือ #{scoreuser}"
 		puts  "คะแนนของ COM #{scorecom}"
 		gameround +=1
-	end	
 
+		
+	end	
+	if scoreuser == 2
+		puts "คุณคือผู้ชนะ"
+	else 
+		puts "คุณแพ้"
+	end	
 end
 
 
